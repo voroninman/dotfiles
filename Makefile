@@ -1,12 +1,11 @@
-links=.vimrc .bashrc .bashrc_profile .gitconfig
+links=.vimrc .bashrc .bash_profile .gitconfig
 
-install: uninstall
+link: unlink
 	for link in $(links); do \
-		echo $$(realpath $$link); \
 		ln -s $$(realpath $$link) ~/.; \
 	done
 
-uninstall:
+unlink:
 	for link in $(links); do \
 		rm -f ~/$$link; \
 	done
