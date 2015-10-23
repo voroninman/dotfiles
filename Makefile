@@ -1,3 +1,5 @@
+# TODO: Migrate to bash scripts
+
 all: bash git vim apps
 
 git:
@@ -17,16 +19,19 @@ bash:
 	ln -s $$(pwd)/.bash_profile ~/.
 
 brew:
-  ruby -e "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-	brew cleanup
+	brew --prefix &>/dev/null || \
+		ruby -e "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 	brew update
+	brew tap caskroom/versions
+	brew tap homebrew/dupes
 
-brew-cask:
+brew-cask: brew
 	brew install caskroom/cask/brew-cask
 
 apps-cli: brew
 	brew install \
 		coreutils \
+		python \
 		nodejs \
 		httpie \
 		mtr \
@@ -38,7 +43,9 @@ apps-cli: brew
 		pyenv-virtualenvwrapper \
 		git \
 		tree
-	brew tap homebrew/dupes
+	# To make bash 4 be the default we need do:
+	# sudo echo '/usr/local/bin/bash' | sudo tee -a /etc/shells
+	# chsh -s /usr/local/bin/bash
 	brew install \
 		homebrew/dupes/gdb \
 		homebrew/dupes/grep \
@@ -64,12 +71,12 @@ apps-gui: brew-cask
 		google-chrome \
 		recordit \
 		sequel-pro \
-		sublime-text \
+		sublime-text3 \
 		virtualbox \
 		iterm2 \
 		appcleaner \
 		vlc
-	brew cask alfred link
 	brew cleanup
 
 apps: apps-cli apps-gui
+	brew upgrade
