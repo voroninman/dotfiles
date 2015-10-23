@@ -5,7 +5,7 @@ git:
 	ln -s $$(pwd)/.gitconfig ~/.
 
 vim:
-	mkdir ~/.vim 2>/dev/null
+	mkdir -p ~/.vim
 	rm -fr ~/.vimrc
 	ln -s $$(pwd)/.vimrc ~/.
 
@@ -17,7 +17,7 @@ bash:
 	ln -s $$(pwd)/.bash_profile ~/.
 
 brew:
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  ruby -e "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 	brew cleanup
 	brew update
 
@@ -34,10 +34,10 @@ apps-cli: brew
 		htop \
 		bash \
 		nvm \
-		node \
 		pyenv \
 		pyenv-virtualenvwrapper \
-		git
+		git \
+		tree
 	brew tap homebrew/dupes
 	brew install \
 		homebrew/dupes/gdb \
@@ -66,7 +66,6 @@ apps-gui: brew-cask
 		sequel-pro \
 		sublime-text \
 		virtualbox \
-		tree \
 		iterm2 \
 		appcleaner \
 		vlc
@@ -74,4 +73,3 @@ apps-gui: brew-cask
 	brew cleanup
 
 apps: apps-cli apps-gui
-	echo
