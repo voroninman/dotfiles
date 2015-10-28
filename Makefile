@@ -75,7 +75,9 @@ apps-gui: brew-cask
 		virtualbox \
 		iterm2 \
 		appcleaner \
-		vlc
+		vlc \
+		knockknock \
+		blockblock
 	brew cleanup
 
 apps: apps-cli apps-gui

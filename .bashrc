@@ -22,7 +22,7 @@ PS1+='$(clr_magenta "\u")'
 PS1+=' at '
 PS1+='$(clr_green "\h")'
 PS1+=" in "
-PS1+='$(clr_blue "\W")'
+PS1+='$(clr_blue "\w")'
 PS1+='$(git_branch)'
 PS1+=":\n$ "
 
