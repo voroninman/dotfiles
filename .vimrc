@@ -12,6 +12,7 @@ set list listchars=trail:·,tab:»·,nbsp:⍽
 set noerrorbells
 set ruler
 set number
+set relativenumber
 
 " Search
 set incsearch
