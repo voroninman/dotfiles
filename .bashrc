@@ -16,6 +16,7 @@ export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
 alias ll="ls -lah --color"
+alias rm="rm -I"
 
 shopt -s cmdhist        # Save multi-line commands in history as single line.
 shopt -s histappend     # Append to history rather than overwrite.
