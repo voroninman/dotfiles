@@ -32,3 +32,8 @@ PS1+='$(git_branch)'
 PS1+=":\n$ "
 
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+export GOPATH=~/.golang
+export PATH=$PATH:$GOPATH/bin
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+export FZF_DEFAULT_COMMAND='ag -g ""'

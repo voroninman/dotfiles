@@ -1,19 +1,26 @@
 set dir=~/.vim
 
-" Code
-syntax on
-set autoindent
-set tabstop=4
-set backspace=2
-set nocp
+" Apperance
+set relativenumber
 set list listchars=trail:·,tab:»·,nbsp:⍽
 
-" Apperance
-set noerrorbells
-set ruler
-set number
-set relativenumber
+let mapleader = ","
+map <Leader>t :FZF<CR>
+map <Leader>s :w<CR>
+map <Tab> :bn<CR>
+map <Leader>e :Explore<CR>
 
-" Search
-set incsearch
-set hlsearch
+call plug#begin('~/.vim/plugged')
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-surround'
+Plug 'raimondi/delimitmate' " Autoclose quotes
+Plug 'bling/vim-bufferline'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'tpope/vim-fugitive' " Git
+Plug 'tpope/vim-commentary'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'davidhalter/jedi-vim'
+Plug 'klen/python-mode'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+call plug#end()
