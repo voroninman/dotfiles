@@ -10,6 +10,9 @@ let g:go_fmt_experimental = 1
 hi Search ctermbg=7
 set autowrite
 set nobackup
+set noswapfile
+set cursorline
+set foldlevel=99
 
 let mapleader = ","
 map <Leader>t :FZF<CR>
@@ -18,8 +21,12 @@ map <Tab> :bn<CR>
 map <Leader>e :Explore<CR>
 map <Leader>. :@:<CR>
 
+" Python folding
+autocmd BufWinEnter *.py setlocal foldexpr=SimpylFold(v:lnum) foldmethod=expr
+autocmd BufWinLeave *.py setlocal foldexpr< foldmethod<
+
 au Filetype go nmap gD :GoDef<CR>
-au Filetype go set tabstop=4 shiftwidth=4 foldmethod=syntax foldlevel=99
+au Filetype go set tabstop=4 shiftwidth=4 foldmethod=syntax
 
 " curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 "    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -35,4 +42,5 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'fatih/vim-go'
 Plug 'airblade/vim-gitgutter'
 Plug 'davidhalter/jedi-vim'
+Plug 'tmhedberg/SimpylFold'
 call plug#end()
