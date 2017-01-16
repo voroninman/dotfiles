@@ -14,9 +14,10 @@ set noswapfile
 set cursorline
 set foldlevel=99
 
-let mapleader = ","
+let mapleader = "\<Space>"
 map <Leader>t :FZF<CR>
 map <Leader>s :w<CR>
+map <Leader>q :q<CR>
 map <Tab> :bn<CR>
 map <Leader>e :Explore<CR>
 map <Leader>. :@:<CR>
@@ -31,18 +32,23 @@ au Filetype go set tabstop=4 shiftwidth=4 foldmethod=syntax
 " curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 "    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 call plug#begin('~/.vim/plugged')
-Plug 'tpope/vim-sensible'
-Plug 'tpope/vim-surround'
-Plug 'raimondi/delimitmate' " Autoclose quotes
-Plug 'bling/vim-bufferline'
-Plug 'nathanaelkane/vim-indent-guides'
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'editorconfig/editorconfig-vim'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'fatih/vim-go'
+" Plug 'majutsushi/tagbar'
+" Plug 'vim-scripts/bufexplorer.zip'
 Plug 'airblade/vim-gitgutter'
+Plug 'bling/vim-bufferline'
+Plug 'christoomey/vim-tmux-navigator'
 Plug 'davidhalter/jedi-vim'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'fatih/vim-go'
+Plug 'itchyny/lightline.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'michaeljsmith/vim-indent-object'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'raimondi/delimitmate' " Autoclose quotes
 Plug 'tmhedberg/SimpylFold'
 Plug 'nvie/vim-flake8'
 Plug 'ruanyl/vim-gh-line'
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-surround'
+Plug 'Valloric/YouCompleteMe'
 call plug#end()
