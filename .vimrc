@@ -3,7 +3,7 @@ set dir=~/.vim
 " Apperance
 set relativenumber
 set list listchars=trail:·,tab:»·,nbsp:⍽
-set colorcolumn=100
+set colorcolumn=80,100
 hi ColorColumn ctermbg=7
 
 let g:go_fmt_experimental = 1
@@ -43,4 +43,6 @@ Plug 'fatih/vim-go'
 Plug 'airblade/vim-gitgutter'
 Plug 'davidhalter/jedi-vim'
 Plug 'tmhedberg/SimpylFold'
+Plug 'nvie/vim-flake8'
+Plug 'ruanyl/vim-gh-line'
 call plug#end()
