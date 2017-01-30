@@ -35,5 +35,9 @@ if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 export GOPATH=~/.golang
 export PATH=$PATH:$GOPATH/bin
 
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
+
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 export FZF_DEFAULT_COMMAND='ag -g ""'
