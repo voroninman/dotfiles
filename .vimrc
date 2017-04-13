@@ -13,10 +13,11 @@ set nobackup
 set noswapfile
 set cursorline
 set foldlevel=99
+set mouse=c
 
 let mapleader = "\<Space>"
 map <Leader>s :w<CR>
-map <Leader>q :q<CR>
+map <Leader>q :wq<CR>
 map <Tab> :bn<CR>
 map <Leader>e :Vex<CR>
 
