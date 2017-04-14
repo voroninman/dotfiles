@@ -19,7 +19,7 @@ export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
 alias ll="ls -lah --color"
 alias rm="rm -I"
-alias tm="tmux a || tmux new-session -s wrapp"
+alias tm="tmux a || tmux new-session -s local"
 
 shopt -s cmdhist        # Save multi-line commands in history as single line.
 shopt -s histappend     # Append to history rather than overwrite.
