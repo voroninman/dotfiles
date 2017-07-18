@@ -4,7 +4,7 @@ set dir=~/.vim
 set relativenumber
 set list listchars=trail:·,tab:»·,nbsp:⍽
 set colorcolumn=80,100
-hi ColorColumn ctermbg=7
+hi ColorColumn ctermbg=DarkGray
 
 let g:go_fmt_experimental = 1
 hi Search ctermbg=7

@@ -13,7 +13,6 @@ vim:
 
 bash:
 	rm -fr ~/.bash{rc,_profile}
-	curl -L https://raw.github.com/maxtsepkov/bash_colors/master/bash_colors.sh > ~/.bash_colors
 	touch ~/.bashrc_local
 	ln -s $$(pwd)/.bashrc ~/.
 	ln -s $$(pwd)/.bash_profile ~/.
