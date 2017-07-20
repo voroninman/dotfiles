@@ -1,6 +1,6 @@
-# TODO: Migrate to bash scripts
-
 all: bash git vim apps
+linux: git vim bash
+macos: git vim bash apps
 
 git:
 	rm -fr ~/.gitconfig
@@ -29,19 +29,31 @@ brew-cask: brew
 
 apps-cli: brew
 	brew install \
-		coreutils \
-		python \
-		nodejs \
-		httpie \
-		mtr \
-		the_silver_searcher \
-		htop \
 		bash \
+		coreutils \
+		docker \
+		git \
+		go \
+		htop \
+		httpie \
+		jq \
+		mtr \
+		nasm \
+		neovim \
+		nmap \
+		nodejs \
 		nvm \
+		pgcli \
+		pstree \
 		pyenv \
 		pyenv-virtualenvwrapper \
-		git \
-		tree
+		python \
+		spoof-mac \
+		the_silver_searcher \
+		tmux \
+		tree \
+		watch \
+		youtube-dl
 	# To make bash 4 be the default we need do:
 	# sudo echo '/usr/local/bin/bash' | sudo tee -a /etc/shells
 	# chsh -s /usr/local/bin/bash
@@ -61,22 +73,25 @@ apps-cli: brew
 
 apps-gui: brew-cask
 	brew cask install --appdir="/Applications" \
-		utorrent \
 		1password \
 		alfred \
-		atom \
+		appcleaner \
+		blockblock
+		cryptomator \
+		dnscrypt \
 		dropbox \
 		flux \
 		google-chrome \
+		iterm2 \
+		knockknock \
+		macdown \
+		postico \
 		recordit \
 		sequel-pro \
-		sublime-text3 \
+		sublime-text \
+		transmission \
 		virtualbox \
-		iterm2 \
-		appcleaner \
-		vlc \
-		knockknock \
-		blockblock
+		vlc
 	brew cleanup
 
 apps: apps-cli apps-gui
