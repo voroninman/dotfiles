@@ -22,7 +22,6 @@ brew:
 		ruby -e "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 	brew update
 	brew tap caskroom/versions
-	brew tap homebrew/dupes
 
 brew-cask: brew
 	brew install caskroom/cask/brew-cask
@@ -45,30 +44,14 @@ apps-cli: brew
 		nvm \
 		pgcli \
 		pstree \
-		pyenv \
-		pyenv-virtualenvwrapper \
 		python \
+		python3 \
 		spoof-mac \
 		the_silver_searcher \
 		tmux \
 		tree \
 		watch \
 		youtube-dl
-	# To make bash 4 be the default we need do:
-	# sudo echo '/usr/local/bin/bash' | sudo tee -a /etc/shells
-	# chsh -s /usr/local/bin/bash
-	brew install \
-		homebrew/dupes/gdb \
-		homebrew/dupes/grep \
-		homebrew/dupes/gzip \
-		homebrew/dupes/less \
-		homebrew/dupes/libpcap \
-		homebrew/dupes/lsof \
-		homebrew/dupes/make \
-		homebrew/dupes/ncurses \
-		homebrew/dupes/openssh \
-		homebrew/dupes/tcpdump \
-		homebrew/dupes/zlib
 	brew cleanup
 
 apps-gui: brew-cask
