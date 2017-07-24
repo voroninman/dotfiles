@@ -1,8 +1,10 @@
 set dir=~/.vim
 
 set list listchars=trail:·,tab:»·,nbsp:⍽
+set tabstop=4
 set noswapfile
 set confirm
+colorscheme pablo
 let mapleader = "\<Space>"
 nmap <Leader>s :w<CR>
 nmap <Leader>S :wq<CR>
@@ -30,17 +32,20 @@ endif
 
 let g:airline_section_z = '%4l:%-4c %3p%%'
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='minimalist'
+let g:deoplete#enable_at_startup = 1
 
 " curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 call plug#begin('~/.vim/plugged')
+Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
+Plug 'fatih/vim-go'
 Plug 'raimondi/delimitmate' " Autoclose quotes
 Plug 'ruanyl/vim-gh-line'
 Plug 'scrooloose/syntastic'
-Plug 'fatih/vim-go'
 Plug 'tpope/vim-fugitive' " Git
 call plug#end()
 
