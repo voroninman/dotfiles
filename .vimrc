@@ -40,6 +40,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'raimondi/delimitmate' " Autoclose quotes
 Plug 'ruanyl/vim-gh-line'
 Plug 'scrooloose/syntastic'
+Plug 'fatih/vim-go'
 Plug 'tpope/vim-fugitive' " Git
 call plug#end()
 

@@ -4,8 +4,7 @@ export CLICOLOR=1
 export LANG=en_GB.UTF-8
 export PATH="/usr/local/sbin:$PATH"
 
-alias ll="ls -lah --color"
-alias rm="rm -I"
+alias ll="ls -lah"
 alias tm="tmux a || tmux new-session -s local"
 
 function parse_git_branch {
