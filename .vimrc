@@ -19,6 +19,11 @@ nmap <Leader>x :bd<CR>
 nmap <Tab> :bn<CR>
 nmap <S-Tab> :bp<CR>
 
+augroup qf
+    autocmd!
+    autocmd FileType qf set nobuflisted
+augroup END
+
 nnoremap <A-h> <C-w>h
 nnoremap <A-j> <C-w>j
 nnoremap <A-k> <C-w>k
