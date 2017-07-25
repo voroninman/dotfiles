@@ -39,6 +39,7 @@ let g:airline_section_z = '%4l:%-4c %3p%%'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='minimalist'
 let g:deoplete#enable_at_startup = 1
+let tmux_navigator_no_mappings = 1
 
 " curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 call plug#begin('~/.vim/plugged')
@@ -52,5 +53,10 @@ Plug 'raimondi/delimitmate' " Autoclose quotes
 Plug 'ruanyl/vim-gh-line'
 Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-fugitive' " Git
+Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
 
+nnoremap <silent> <A-h> :TmuxNavigateLeft<CR>
+nnoremap <silent> <A-j> :TmuxNavigateDown<CR>
+nnoremap <silent> <A-k> :TmuxNavigateUp<CR>
+nnoremap <silent> <A-l> :TmuxNavigateRight<CR>

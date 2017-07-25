@@ -46,6 +46,7 @@ apps-cli: brew
 		pstree \
 		python \
 		python3 \
+		reattach-to-user-namespace \
 		spoof-mac \
 		the_silver_searcher \
 		tmux \
