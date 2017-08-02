@@ -2,11 +2,10 @@ source ~/.bashrc_local
 
 export CLICOLOR=1
 export LANG=en_GB.UTF-8
-export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/bin:$PATH"
 
 alias ll="ls -lah"
 alias tm="tmux a || tmux new-session -s local"
-alias gh="open `git remote -v | awk '/fetch/{print $2}' | sed -Ee 's#(git@|git://)#http://#' -e 's@com:@com/@'`| head -n1"
 
 function parse_git_branch {
    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'

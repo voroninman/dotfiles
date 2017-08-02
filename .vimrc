@@ -4,7 +4,9 @@ set list listchars=trail:·,tab:»·,nbsp:⍽
 set tabstop=4
 set noswapfile
 set confirm
+set autowriteall
 colorscheme pablo
+highlight LineNr ctermfg=239
 let mapleader = "\<Space>"
 nmap <Leader>s :w<CR>
 nmap <Leader>S :wq<CR>
