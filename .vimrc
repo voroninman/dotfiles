@@ -4,6 +4,7 @@ set list listchars=trail:·,tab:»·,nbsp:⍽
 set tabstop=4
 set noswapfile
 set confirm
+set mouse=a
 set autowriteall
 colorscheme pablo
 highlight LineNr ctermfg=239
@@ -18,12 +19,13 @@ nmap <Leader>t :Files<CR>
 nmap <Leader>f :Ag<CR>
 nmap <Leader>r :BLines<CR>
 nmap <Leader>x :bd<CR>
+nmap <Leader>h :nohl<CR>
 nmap <Tab> :bn<CR>
 nmap <S-Tab> :bp<CR>
 
 augroup qf
-    autocmd!
-    autocmd FileType qf set nobuflisted
+	autocmd!
+	autocmd FileType qf set nobuflisted
 augroup END
 
 nnoremap <A-h> <C-w>h
@@ -53,7 +55,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'fatih/vim-go'
 Plug 'raimondi/delimitmate' " Autoclose quotes
 Plug 'ruanyl/vim-gh-line'
-Plug 'scrooloose/syntastic'
+" Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-fugitive' " Git
 Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
@@ -62,3 +64,4 @@ nnoremap <silent> <A-h> :TmuxNavigateLeft<CR>
 nnoremap <silent> <A-j> :TmuxNavigateDown<CR>
 nnoremap <silent> <A-k> :TmuxNavigateUp<CR>
 nnoremap <silent> <A-l> :TmuxNavigateRight<CR>
+
