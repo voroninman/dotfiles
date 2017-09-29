@@ -6,6 +6,7 @@ set noswapfile
 set confirm
 set mouse=a
 set autowriteall
+set mouse=a
 colorscheme pablo
 highlight LineNr ctermfg=239
 let mapleader = "\<Space>"
