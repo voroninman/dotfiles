@@ -1,12 +1,11 @@
 set dir=~/.vim
 
-set list listchars=trail:·,tab:»·,nbsp:⍽
-set tabstop=4
-set noswapfile
-set confirm
-set mouse=a
 set autowriteall
+set confirm
+set list listchars=trail:·,tab:»·,nbsp:⍽
 set mouse=a
+set noswapfile
+set tabstop=4
 colorscheme pablo
 highlight LineNr ctermfg=239
 let mapleader = "\<Space>"
