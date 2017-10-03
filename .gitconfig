@@ -15,3 +15,5 @@
   dump = cat-file -p
 [commit]
   template = ~/.git-commit-template
+[core]
+  excludesfile = ~/.gitignore
