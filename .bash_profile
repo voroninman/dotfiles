@@ -49,7 +49,6 @@ export GOPATH=$HOME/Code/go
 export PATH=$PATH:$GOPATH/bin
 export PATH="/usr/local/sbin:$PATH"
 export PATH="~/.cargo/bin:$PATH"
-export PS1='\w\n$ '
 export LANG=en_GB.utf8
 export PS1='\w $(parse_git_branch)\n$ '
 
