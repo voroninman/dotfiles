@@ -49,6 +49,7 @@ export GOPATH=$HOME/Code/go
 export PATH=$PATH:$GOPATH/bin
 export PATH="/usr/local/sbin:$PATH"
 export PATH="~/.cargo/bin:$PATH"
+export PATH="~/.local/bin:$PATH"
 export LANG=en_GB.utf8
 export PS1='\w $(parse_git_branch)\n$ '
 
@@ -58,3 +59,7 @@ fi
 if [ -f $(brew --prefix)/etc/bash_completion.d/git-completion.bash ]; then
   . $(brew --prefix)/etc/bash_completion.d/git-completion.bash
 fi
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+export FZF_DEFAULT_COMMAND='rg --files'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
