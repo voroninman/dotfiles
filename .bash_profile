@@ -53,6 +53,11 @@ export PATH="~/.local/bin:$PATH"
 export LANG=en_GB.utf8
 export PS1='\w $(parse_git_branch)\n$ '
 
+export LANGUAGE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LC_TYPE=en_US.UTF-8
+
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
 fi
