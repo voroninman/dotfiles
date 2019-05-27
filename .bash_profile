@@ -68,3 +68,9 @@ fi
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 export FZF_DEFAULT_COMMAND='rg --files'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/voroninman/Downloads/google-cloud-sdk/path.bash.inc' ]; then . '/Users/voroninman/Downloads/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/voroninman/Downloads/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/voroninman/Downloads/google-cloud-sdk/completion.bash.inc'; fi
