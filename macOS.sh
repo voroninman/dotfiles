@@ -1,4 +1,8 @@
+xcode-select --install
+
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew bundle
+
 defaults write com.apple.dock persistent-apps '()'
 defaults write com.apple.dock persistent-others '()'
 defaults write com.apple.dock autohide -bool true
