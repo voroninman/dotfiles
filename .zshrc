@@ -1,8 +1,9 @@
 export GOPATH=$HOME/Code/go
 export PATH=$PATH:$GOPATH/bin
 export PATH="/usr/local/sbin:$PATH"
-export PATH="~/.cargo/bin:$PATH"
-export PATH="~/.local/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
 
 export PROMPT="%~ ⚡️ "
 export CLICOLOR=1
@@ -21,5 +22,3 @@ fpath=($(brew --prefix)/share/zsh-completions $fpath)
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='rg --hidden -l ""'
-
-export PATH="/usr/local/opt/openjdk/bin:$PATH"

@@ -4,7 +4,6 @@ set nobackup
 set nowritebackup
 set backspace=2
 set number
-set cursorline
 set guioptions=
 set guifont=SFMono-Regular
 
@@ -14,5 +13,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'tpope/vim-sensible'
+Plug 'noahfrederick/vim-neovim-defaults'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'airblade/vim-gitgutter'
 call plug#end()
