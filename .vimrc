@@ -17,3 +17,6 @@ Plug 'noahfrederick/vim-neovim-defaults'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'airblade/vim-gitgutter'
 call plug#end()
+
+" Enable true colors if available
+set termguicolors
