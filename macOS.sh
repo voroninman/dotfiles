@@ -1,7 +1,8 @@
 xcode-select --install
 
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew bundle
+brew bundle --force cleanup
+brew bundle dump --force
 
 defaults write com.apple.dock persistent-apps '()'
 defaults write com.apple.dock persistent-others '()'
