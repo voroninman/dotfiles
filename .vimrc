@@ -1,11 +1,10 @@
 autocmd BufWritePre * %s/\s\+$//e
+set backspace=2
 set hidden
 set nobackup
+set noswapfile
 set nowritebackup
-set backspace=2
 set number
-set guioptions=
-set guifont=SFMono-Regular
 
 nnoremap Q @q
 
