@@ -1,6 +1,14 @@
-alias less="less -RS"
-export CLICOLOR=1
+# brew
+eval "$(~/.homebrew/bin/brew shellenv)"
+
+# pipx
+export PATH=$PATH:$HOME/.local/bin
+
+# Go
 export GOPATH=$HOME/Code/go
+export PATH=$PATH:$GOPATH/bin
+
+# Locale
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 export LC_COLLATE="en_US.UTF-8"
@@ -9,28 +17,24 @@ export LC_MESSAGES="en_US.UTF-8"
 export LC_MONETARY="en_US.UTF-8"
 export LC_NUMERIC="en_US.UTF-8"
 export LC_TIME="en_US.UTF-8"
-export PAGER="less"
-export PATH="/usr/local/bin:$PATH"
-export PATH=$PATH:$GOPATH/bin
-export PATH="$HOME/.cargo/bin:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
-export PATH="/usr/local/opt/mysql-client/bin:$PATH"
-export PATH="/usr/local/opt/openjdk/bin:$PATH"
-setopt APPEND_HISTORY
 
-# FZF
+# Pager
+export PAGER="less"
+alias less="less -RS"
+
+# fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='rg --hidden -l ""'
 
 # Autocomplete
-autoload -Uz compinit
-compinit
+autoload -Uz compinit; compinit
 fpath=($(brew --prefix)/share/zsh-completions $fpath)
-autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /usr/local/bin/terraform terraform
-[[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
+autoload -Uz bashcompinit && bashcompinit
 
-# Prompt twists.
+# ls colors
+export CLICOLOR=1
+
+# Prompt
 function _aws_profile() {
   [[ -n $AWS_PROFILE ]] && echo ' ☋ '$AWS_PROFILE
 }
