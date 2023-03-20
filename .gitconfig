@@ -1,5 +1,26 @@
 [user]
-	email = voroninman@gmail.com
-	name = Viktor Voronin
+  email = voroninman@gmail.com
+  name = Viktor Voronin
 [alias]
-	logg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -16
+ logg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -16
+[core]
+  pager = delta --light
+  excludesFile = ~/.gitignore
+[interactive]
+  diffFilter = delta --color-only --light
+[delta]
+  navigate = true  # use n and N to move between diff sections
+  line-numbers = true
+[merge]
+  conflictstyle = diff3
+  autoStash = true
+[diff]
+  colorMoved = default
+[push]
+  autoSetupRemote = true
+[pull]
+  rebase = true
+[rebase]
+  autoStash = true
+[fetch]
+  prune = true
