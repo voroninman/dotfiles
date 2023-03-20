@@ -1,5 +1,6 @@
 # brew
-eval "$(~/.homebrew/bin/brew shellenv)"
+eval "$(/opt/homebrew/bin/brew shellenv 2>/dev/null)"
+eval "$(~/.homebrew/bin/brew shellenv 2>/dev/null)"
 
 # pipx
 export PATH=$PATH:$HOME/.local/bin
@@ -54,5 +55,5 @@ export PROMPT="${PROMPT}"'%B%F{white}$(_kube_context)%b%f'
 export PROMPT="${PROMPT}"'%B%F{white}$(_aws_profile)%b%f'
 export PROMPT="${PROMPT}${NEWLINE}# "
 
-# Keep the nudes out of git.
+# Nudes
 [ -f ~/.zshrc.private ] && source ~/.zshrc.private
