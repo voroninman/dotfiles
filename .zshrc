@@ -53,7 +53,7 @@ export PROMPT="%B%~%b"
 export PROMPT="${PROMPT}"'%B%F{white}$(_git_branch_name)%b%f'
 export PROMPT="${PROMPT}"'%B%F{white}$(_kube_context)%b%f'
 export PROMPT="${PROMPT}"'%B%F{white}$(_aws_profile)%b%f'
-export PROMPT="${PROMPT}${NEWLINE}# "
+export PROMPT="${PROMPT}${NEWLINE}%# "
 
 # Nudes
 [ -f ~/.zshrc.private ] && source ~/.zshrc.private
