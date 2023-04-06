@@ -28,9 +28,13 @@ alias less="less -RS"
 export FZF_DEFAULT_COMMAND='rg --hidden -l ""'
 
 # Autocomplete
-autoload -Uz compinit; compinit
-fpath=($(brew --prefix)/share/zsh-completions $fpath)
-autoload -Uz bashcompinit && bashcompinit
+if type brew &>/dev/null
+then
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
+  autoload -Uz compinit
+  compinit
+fi
 
 # ls colors
 export CLICOLOR=1
