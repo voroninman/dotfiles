@@ -52,12 +52,11 @@ function _kube_context() {
   [[ -n $ctx ]] && echo ' ⏣ '$ctx
 }
 setopt PROMPT_SUBST
-export NEWLINE=$'\n'
-export PROMPT="%B%~%b"
+export PROMPT="%B%1~%b"
 export PROMPT="${PROMPT}"'%B%F{white}$(_git_branch_name)%b%f'
 export PROMPT="${PROMPT}"'%B%F{white}$(_kube_context)%b%f'
 export PROMPT="${PROMPT}"'%B%F{white}$(_aws_profile)%b%f'
-export PROMPT="${PROMPT}${NEWLINE}%# "
+export PROMPT="${PROMPT}"$'\n'"%# "
 
 # Nudes
 [ -f ~/.zshrc.private ] && source ~/.zshrc.private
