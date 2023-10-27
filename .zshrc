@@ -9,6 +9,9 @@ export PATH=$PATH:$HOME/.local/bin
 export GOPATH=$HOME/Code/go
 export PATH=$PATH:$GOPATH/bin
 
+# Rust
+export PATH="$HOME/.cargo/bin:$PATH"
+
 # Locale
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
@@ -35,6 +38,9 @@ then
   autoload -Uz compinit
   compinit
 fi
+
+# Autocomplete from bash
+autoload -U +X bashcompinit && bashcompinit
 
 # ls colors
 export CLICOLOR=1
