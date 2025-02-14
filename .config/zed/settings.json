@@ -1,0 +1,35 @@
+{
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
+  "ui_font_size": 14,
+  "terminal": {
+    "line_height": {
+      "custom": 1.25
+    },
+    "copy_on_select": true
+  },
+  "buffer_font_size": 12.0,
+  "buffer_line_height": {
+    "custom": 1.25
+  },
+  "theme": {
+    "mode": "system",
+    "light": "Github Light Tritanopia",
+    "dark": "One Dark"
+  },
+  "buffer_font_family": "JuliaMono",
+  "autosave": "on_focus_change",
+  "git": {
+    "inline_blame": {
+      "enabled": false
+    }
+  },
+  "format_on_save": "on",
+  "languages": {
+    "Python": {
+      "formatter": "language_server",
+      "language_servers": ["pyright", "ruff"]
+    }
+  }
+}
