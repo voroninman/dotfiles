@@ -69,9 +69,5 @@ export PROMPT="${PROMPT}"$'\n'"%# "
 # Nudes
 [ -f ~/.zshrc.private ] && source ~/.zshrc.private
 
-# Mojo
-export MODULAR_HOME="/Users/admin/.modular"
-export PATH="/Users/admin/.modular/pkg/packages.modular.com_mojo/bin:$PATH"
-
 # Orbstack
 export DOCKER_HOST=unix:///$HOME/.orbstack/run/docker.sock
