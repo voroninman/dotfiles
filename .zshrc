@@ -12,10 +12,6 @@ export PATH=$PATH:$GOPATH/bin
 # Rust
 export PATH="$HOME/.cargo/bin:$PATH"
 
-# Mojo
-export MODULAR_HOME="$HOME/.modular"
-export PATH="$MODULAR_HOME/pkg/packages.modular.com_mojo/bin:$PATH"
-
 # Locale
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
