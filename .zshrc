@@ -1,8 +1,6 @@
 # brew
 eval "$(/opt/homebrew/bin/brew shellenv 2>/dev/null)"
 eval "$(~/.homebrew/bin/brew shellenv 2>/dev/null)"
-export HOMEBREW_CASK_OPTS="--appdir=~/Applications"
-
 
 # pipx
 export PATH=$PATH:$HOME/.local/bin
@@ -13,6 +11,10 @@ export PATH=$PATH:$GOPATH/bin
 
 # Rust
 export PATH="$HOME/.cargo/bin:$PATH"
+
+# Mojo
+export MODULAR_HOME="$HOME/.modular"
+export PATH="$MODULAR_HOME/pkg/packages.modular.com_mojo/bin:$PATH"
 
 # Locale
 export LANG="en_US.UTF-8"
@@ -71,3 +73,15 @@ export PROMPT="${PROMPT}"$'\n'"%# "
 
 # Orbstack
 export DOCKER_HOST=unix:///$HOME/.orbstack/run/docker.sock
+
+# Bindings
+bindkey '\e[H'    beginning-of-line
+bindkey '\e[F'    end-of-line
+
+# nvm
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/Users/viktor/.homebrew/opt/nvm/nvm.sh" ] && \. "/Users/viktor/.homebrew/opt/nvm/nvm.sh"
+  [ -s "/Users/viktor/.homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/Users/viktor/.homebrew/opt/nvm/etc/bash_completion.d/nvm"
+
+# bun completions
+[ -s "/Users/viktor/.bun/_bun" ] && source "/Users/viktor/.bun/_bun"
